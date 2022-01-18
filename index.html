@@ -1,38 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/col.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Title</title>
 </head>
+
 <body>
 
-<!-- HEADER PART  -->
-<section id="header-site"></section>
-<header>
+  <!-- HEADER PART  -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main row middle">
+        <div class="header-logo">
+          <a href="#"><img src="imgs/logo.svg" alt="logo" width="126" height="39"></a>
+        </div>
+        <nav class="header-nav row">
+          <ul class="header-nav-list row middle">
+            <li class="header-nav-item"><a class="header-nav-link" href="#">home</a></li>
+            <li class="header-nav-item"><a class="header-nav-link" href="#">features</a></li>
+            <li class="header-nav-item"><a class="header-nav-link" href="#">elements</a></li>
+            <li class="header-nav-item"><a class="header-nav-link" href="#">membership</a></li>
 
-</header>
-<!-- HEADER PART END -->
+            <li class="header-nav-item row middle">more <i class='bx bx-chevron-down icon-down'></i>
+              <ul class="drop-list">
+                <li class="drop-item"><a class="drop-link" href="#">tags</a></li>
+                <li class="drop-item"><a class="drop-link" href="#">authors</a></li>
+                <li class="drop-item"><a class="drop-link" href="#">monthly archive</a></li>
+                <li class="drop-item"><a class="drop-link" href="#">yelary archive</a></li>
+                <li class="drop-item"><a class="drop-link" href="#">contact</a></li>
+                <li class="drop-item"><a class="drop-link" href="#">get theme</a></li>
+              </ul>
 
-<!-- MAIN PART  -->
+            </li>
 
-<main>
 
-</main>
+            <li class="header-nav-item"><a class="header-nav-link" href="#">sign in</a></li>
+            <li class="header-nav-item"><a class="header-nav-btn-link" href="#">sign up</a></li>
+            <li class="header-nav-item" id="id-search"><i class='bx bx-search'></i>
+            </li>
+            <li class="header-nav-item"><i class='bx bx-moon'></i></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER PART END -->
 
-<!-- MAIN PART END -->
+  <div class="modal-box" id="id-modalbox">
+    <div class="container">
+      <div class="modal-search">
+        <input class="modal-input" type="text" id="text" placeholder="Type to search">
+        <p class="modal-desc">Press ESC to close.
+        </p>
+      </div>
 
-<!-- FOOTER PART -->
+      <div class="modal-list-box">
+        <p class="modal-text">See posts by Popular tags</p>
+        <ul class="modal-list row">
+          <li class="modal-item"><a class="modal-link" href="#">Inspiration</a></li>
+          <li class="modal-item"><a class="modal-link" href="#">Lifestyle</a></li>
+          <li class="modal-item"><a class="modal-link" href="#">Nature</a></li>
+          <li class="modal-item"><a class="modal-link" href="#">Health</a></li>
+          <li class="modal-item"><a class="modal-link" href="#">Travel</a></li>
+          <li class="modal-item"><a class="modal-link" href="#">Food</a></li>
+          <li class="modal-item"><a class="modal-link" href="#">Technology</a></li>
+        </ul>
+      </div>
+      <button class="modal-btn" id="id-remove">
+        <i class='bx bx-x-circle icon-x'></i>
+      </button>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
 
-<footer>
+  <!-- HERO PART  -->
 
-</footer>
+  <section class="hero-part">
+    <div class="container">
+      <div class="row">
 
-<!-- FOOTER PART END -->
+        <div class="col-7">
+          <h2 class="hero-title">Hay, I am Arun</h2>
+          <p class="hero-text">An architect, software developer, YouTuber and keynote speaker. On this site I write
+            about my learning and experience.
+          </p>
+
+          <div class="hero-email-box">
+            <form>
+              <label for="email">
+                <input type="email" id="email" placeholder="Your email address" required>
+              </label>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+          <ul class="hero-list row middle">
+            <li class="hero-item">
+              <p>Follow:</p>
+            </li>
+            <li class="hero-item"><a href="#" target="_blank"><i class='bx bxl-twitter socical'></i></a></li>
+            <li class="hero-item"><a href="#" target="_blank"><i class='bx bxl-facebook socical'></i></a></li>
+            <li class="hero-item"><a href="#" target="_blank"><i class='bx bxl-instagram socical'></i></a></li>
+            <li class="hero-item"><a href="#" target="_blank"><i class='bx bxl-github socical'></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO PART PART -->
+
+
+
+  <!-- MAIN PART  -->
+
+  <main>
+
+  </main>
+
+  <!-- MAIN PART END -->
+
+  <!-- FOOTER PART -->
+
+  <footer>
+
+  </footer>
+
+  <!-- FOOTER PART END -->
 
 </body>
+
 </html>
