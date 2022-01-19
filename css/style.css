@@ -5,13 +5,34 @@
 }
 
 :root {
-  --body-color: 
+  --nav-color: #161f38;
+  --border-booton: #0057ff;
+  --btn-color: #0057ff;
+  --box-color: #fff;
+  --body: #fff;
+  --icon: #161f38;
+  --modal: grey;
+  --moon-img: url('../imgs/dark-moon.svg');
+  --logo-img: url('../imgs/logo.svg');
+}
+
+.dark {
+  --nav-color: #fff;
+  --border-booton: #fff;
+  --box-color: #161f38;
+  --body: #272935;
+  --icon: #fff;
+  --modal: #161f38;
+  --moon-img: url('../imgs/light_mode.svg');
+  --logo-img: url('../imgs/logo-light.svg');
 }
 
 body {
   min-height: 100vh;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
+  background-color: var(--body);
+  color: var(--nav-color);
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -26,7 +47,7 @@ main {
 .site-header {
   width: 100%;
   position: fixed;
-  background-color: #fff;
+  background-color: var(--body);
   padding: 12px 0;
   border-bottom: 1px solid #efefef;
   z-index: 1000;
@@ -37,8 +58,19 @@ main {
 }
 
 .header-logo {
+  background-image: var(--logo-img);
+  background-repeat: no-repeat;
   width: 126px;
   height: 39px;
+  background-size: cover;
+}
+
+.bx-mon {
+  width: 18px;
+  height: 18px;
+  background-image: var(--moon-img);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header-nav {
@@ -54,7 +86,7 @@ main {
   font-weight: 500;
   font-size: 16px;
   margin: 4px 15px;
-  color: #161f38;
+  color: var(--nav-color);
   text-transform: capitalize;
 }
 
@@ -68,7 +100,7 @@ main {
 
 .header-nav-link {
   text-decoration: none;
-  color: #161f38;
+  color: var(--nav-color);
 }
 
 .header-nav-item:hover .header-nav-link::after {
@@ -76,7 +108,7 @@ main {
   display: block;
   width: 16px;
   height: 2px;
-  background-color: #161F38;
+  background-color: var(--nav-color);
   border-radius: 2px;
   animation: header-after 0.4s linear alternate;
 }
@@ -94,7 +126,7 @@ main {
   content: '';
   display: block;
   width: 16px;
-  border-bottom: 2px solid #0057ff;
+  border-bottom: 2px solid var(--border-booton);
 }
 
 .icon-down {
@@ -113,9 +145,6 @@ main {
   color: #fff;
 }
 
-
-
-
 .drop-list {
   list-style-type: none;
   display: none;
@@ -123,7 +152,7 @@ main {
   top: 20%;
   margin-top: 13px;
   left: -1rem;
-  background: #fff;
+  background: var(--box-color);
   border: 1px solid #efefef;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   z-index: 9;
@@ -141,7 +170,7 @@ main {
 .drop-item {
   display: inline-flex;
   width: 100%;
-  color: #161f38;
+  color: var(--nav-color);
   position: relative;
   font-weight: 500;
   font-size: 1rem;
@@ -151,7 +180,7 @@ main {
 
 .drop-link {
   text-decoration: none;
-  color: #161f38;
+  color: var(--nav-color);
   margin-top: 4px;
   margin-bottom: 4px;
 }
@@ -161,7 +190,7 @@ main {
   display: block;
   width: 16px;
   height: 2px;
-  background-color: #161F38;
+  background-color: var(--nav-color);
   border-radius: 2px;
   animation: header-after 0.4s linear alternate;
 }
@@ -172,7 +201,7 @@ main {
   width: 100%;
   height: 100%;
   z-index: 2000;
-  background-color: #fff;
+  background-color: var(--box-color);
   overflow: hidden;
 }
 
@@ -201,14 +230,14 @@ main {
 }
 
 .modal-input:focus {
-  outline: 1px solid #0057ff;
+  outline: 1px solid var(--border-booton);
 }
 
 .modal-desc {
   margin: -1rem rem 1.25rem 1rem;
   text-align: right;
   font-size: .75rem;
-  color: #161f38;
+  color: var(--nav-color);
 }
 
 .modal-list-box {
@@ -232,7 +261,7 @@ main {
 
 .modal-text {
   font-size: 18px;
-  color: #161f38;
+  color: var(--nav-color);
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -245,10 +274,9 @@ main {
   line-height: 28px;
   padding: 5px 15px;
   border-radius: 15px;
-  background: #0057ff;
-  color: #fff;
+  background: var(--border-booton);
+  color: var(--box-color);
   margin: 0 8px 8px 0;
-  /* opacity: .9; */
 }
 
 .modal-item:nth-child(1) .modal-link {
@@ -283,7 +311,7 @@ main {
 
 .icon-x {
   font-size: 40px;
-  color: #161f38;
+  color: var(--icon);
 }
 /* SITE HERADER PART END */
 
@@ -306,7 +334,7 @@ main {
 } */
 
 .hero-title {
-  color: #161f38;
+  color: var(--nav-color);
   font-weight: 600;
   line-height: 1.2px;
   font-size: 64px;
@@ -316,7 +344,7 @@ main {
 
 .hero-text {
   width: 650px;
-  color: #161f38;
+  color: var(--nav-color);
   font-size: 24px;
   margin-bottom: 30px;
 }
@@ -332,7 +360,7 @@ main {
   border: 1px solid #dadce5;
 }
 .input-email:focus {
-  outline: 1px solid #0057ff;
+  outline: 1px solid var(--border-booton);
 }
 
 .hero-btn {
@@ -340,7 +368,7 @@ main {
   background-color: #0057ff;
   border: none;
   border-radius: 4px;
-  color: #fff;
+  color: var(--box-color);
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 500;
@@ -354,12 +382,12 @@ main {
 .hero-item {
   margin-right: 12px;
   font-size: 16px;
-  color: #161f38;
+  color: var(--nav-color);
 }
 
 .icon-socical {
   font-size: 24px;
-  color: #161f38;
+  color: var(--icon);
 }
 
 .hero-img {
@@ -535,11 +563,11 @@ main {
 }
 .main-posts-title {
   display: inline-block;
-  color: #161f38;
+  color: var(--nav-color);
   font-weight: 600;
   line-height: 1.2;
   font-size: 24px;
-  border-bottom: 4px solid #0057ff;
+  border-bottom: 4px solid var(--border-booton);
   border-radius: 4px;
   margin-top: 19px;
   margin-bottom: 40px;
@@ -554,6 +582,8 @@ main {
   margin-right: 34px;
 }
 
+
+
 .main-posts-sections {
   display: inline-flex;
   font-size: .875rem;
@@ -567,12 +597,25 @@ main {
   margin: 0 8px 8px 0;
 }
 
+.redline {
+  background: #ff005c;
+}
+.rozviy {
+  background: #B43ADF;
+}
+.yellow {
+  background: #9D6805;
+}
+.green {
+  background: #2D841F;
+}
+
 .main-posts-subtitle {
   width: 670px;
   font-weight: 600;
   line-height: 1.2;
   font-size: 32px;
-  color: #161f38;
+  color: var(--nav-color);
   margin-top: 8px;
   margin-bottom: 16px;
 }
@@ -582,6 +625,7 @@ main {
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 24px;
+  color: var(--nav-color);
 }
 
 .main-posts-time {
@@ -703,6 +747,7 @@ main {
   border: none;
   border-radius: 4px;
   margin-bottom: 64px;
+  cursor: pointer;
 }
 
 /* MAIN POSTS PART END */
@@ -830,7 +875,7 @@ main {
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
-  color: #161f38;
+  color: var(--nav-color);
 }
 
 .footer-end {
